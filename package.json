@@ -5,7 +5,9 @@
   "main": "assets/app.js",
   "scripts": {
     "build": "tsc",
-    "serve": "tsc --watch"
+    "serve": "tsc --watch",
+    "start": "npm run build && netlify dev --port 3000",
+    "deploy": "netlify deploy --prod"
   },
   "keywords": [
     "typescript"
@@ -13,6 +15,7 @@
   "author": "Hector",
   "license": "MIT",
   "devDependencies": {
+    "netlify-cli": "^3.17.0",
     "typescript": "^4.2.4"
   }
 }
